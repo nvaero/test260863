@@ -1,0 +1,775 @@
+/* Réinitialisation des styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Style de l'en-tête (header) */
+header {
+    background-color: #fff; /* Rendre le header transparent */
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Assurer que le header est au-dessus du contenu */
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0)); /* Dégradé de couleur */
+    transition: top 0.3s;
+}
+
+header h1 {
+    margin-left: 20px; /* Ajoute une marge à droite du titre */
+    cursor: pointer;
+}
+
+.logo img {
+    width: 225px; /* Largeur souhaitée pour votre logo */
+    height: 40px;
+    margin-left:15px ;
+    cursor: pointer;
+}
+
+/* Lorsque vous faites défiler vers le bas, cachez le header en le déplaçant hors de l'écran */
+header.scrolled {
+    top: -100px; /* Déplace le header hors de l'écran vers le haut */
+}
+
+
+/* Style de la barre de navigation (nav) */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent; /* Couleur de fond semi-transparente */
+    padding: 10px 20px;
+    margin-left: auto;
+    
+}
+
+
+/* Style des liens dans la barre de navigation */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    
+    font-weight: bold;
+    font-size: 19px;
+    position: relative;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    
+}
+
+
+
+nav a::after {
+    content: ''; /* Contenu vide (utilisé pour le pseudo-élément) */
+    position: absolute;
+    bottom: -2px; /* Position sous le texte */
+    left: 0;
+    width: 0; /* Largeur initiale du trait (masqué au départ) */
+    height: 2px; /* Épaisseur du trait */
+    background-color: #ff6600; /* Couleur du trait */
+    transition: width 0.3s ease; /* Animation de transition pour la largeur */
+    
+}
+
+/* Au survol (hover) des liens */
+nav a:hover::after {
+    width: 100%; /* Afficher le trait en élargissant de gauche à droite */
+}
+
+
+
+/* Style du logo dans la navigation */
+.nav-logo {
+    flex: 0 0 auto; /* Empêcher le logo de rétrécir ou s'étendre */
+    margin: 0 20px; /* Marge autour du logo */
+}
+
+.nav-logo img {
+    width: 100px; /* Taille du logo */
+    height: auto;
+}
+/* Style de la zone de contenu dans l'en-tête */
+.header-content {
+    position: relative;
+}
+
+/* Style de la vidéo principale */
+.main-video {
+    width: 100%;
+    max-height: 100%;/* 100% de la hauteur de la fenêtre */
+    object-fit: cover; /* Redimensionner la vidéo pour couvrir toute la zone */
+    object-position: center; /* Centrer la vidéo horizontalement */
+}
+
+
+
+/* Style du contenu principal (main) */
+main {
+    text-align: center;
+    padding: 120px 20px 50px; /* Ajouter de l'espace en haut pour compenser le header transparent */
+}
+
+/* Style du pied de page (footer) */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style des liens dans le pied de page */
+footer nav a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+    footer nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav a {
+        font-size: 15px;
+        margin: 10px 0; /* Ajouter de la marge verticale entre les liens */
+    }
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+/* Style du texte en gras */
+.video-overlay h2 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Style du sous-titre */
+.video-overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style du bouton */
+.video-overlay .main-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Au survol (hover) du bouton */
+.video-overlay .main-button:hover {
+    background-color: #e65c00;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+/* Style du texte en gras dans la surimpression */
+.image-overlay h2 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.property-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.property-text {
+    flex: 1; /* Permet au contenu texte de s'étendre */
+    margin-right: 30px; /* Marge à droite pour l'espace entre le texte et l'image */
+}
+
+.property-text h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.property-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.property-image {
+    flex: 1; /* Permet à l'image de s'étendre */
+}
+
+.property-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.discover-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.discover-button:hover {
+    background-color: #e65c00;
+}
+@media screen and (max-width: 768px) {
+    .property-section {
+        flex-direction: column-reverse; /* Inverser l'ordre des éléments */
+        padding: 30px;
+    }
+
+    .property-text,
+    .property-image {
+        flex: none; /* Annuler la flexibilité pour le réalignement */
+        width: 100%; /* Prendre toute la largeur disponible */
+        margin: 0;
+    }
+
+    .property-text {
+        margin-bottom: 30px;
+    }
+}
+
+
+.region-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.images-container img {
+    width: calc(25% - 10px); /* Ajustez la taille selon vos besoins */
+    height: auto;
+    border-radius: 15px;
+}
+
+.text-container {
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .images-container img {
+        width: calc(50% - 10px); /* 2 images par ligne */
+    }
+}
+
+@media (max-width: 600px) {
+    .images-container img {
+        width: 100%; /* 1 image par ligne */
+    }
+}
+
+
+.location-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.location-text {
+    margin-bottom: 20px;
+}
+
+.location-text h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.location-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles spécifiques aux appareils mobiles */
+@media screen and (max-width: 768px) {
+    #map {
+        height: 300px; /* Réduire la hauteur de la carte sur les petits écrans */
+    }
+}
+
+
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact-text {
+    margin-bottom: 20px;
+}
+
+.contact-text h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    font-size: 18px;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-email:hover {
+    color: #e65c00;
+}
+
+/* Styles spécifiques aux appareils mobiles */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        padding: 30px 10px;
+    }
+
+    .contact-text h2 {
+        font-size: 20px;
+    }
+
+    .contact-text p {
+        font-size: 14px;
+    }
+
+    .contact-email {
+        font-size: 16px;
+    }
+}
+
+
+.legal-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.legal-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.legal-content h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.legal-content p {
+    margin-bottom: 10px;
+}
+
+.legal-content a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.legal-content a:hover {
+    text-decoration: underline;
+}
+
+
+.privacy-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.privacy-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.privacy-content h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.privacy-content p {
+    margin-bottom: 10px;
+}
+
+.privacy-content ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.privacy-content ul li {
+    margin-bottom: 10px;
+}
+
+.privacy-content a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.privacy-content a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Styles spécifiques aux appareils mobiles (max-width: 768px) */ 
+@media screen and (max-width: 768px) {
+    /* Cacher la barre de navigation principale */
+    nav.main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Déplacer le menu hors de l'écran à droite par défaut */
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 1000;
+        transition: right 0.3s ease; /* Animation de transition pour le déplacement vers la droite */
+        display: flex;
+        flex-direction: column; /* Afficher les éléments du menu en colonne */
+        justify-content: center; /* Centrer verticalement les éléments du menu */
+        align-items: center;
+    }
+
+    /* Afficher le bouton du menu hamburger */
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1500; /* Assurez-vous que le bouton hamburger est au-dessus du contenu */
+        cursor: pointer;
+    }
+
+    /* Style du bouton du menu hamburger (traits) */
+    .nav-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px auto;
+        transition: transform 0.3s ease;
+    }
+
+    /* Animation du menu hamburger (rotation des traits) */
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(45deg);
+    }
+    
+    header {
+        justify-content: space-around;
+    }
+    
+    nav.main-nav.active {
+        right: 0;
+        
+    }
+    
+
+/* Style des liens dans le menu de navigation mobile */
+    nav.main-nav.active a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 20px;
+        display: block;
+        transition: background-color 0.3s ease;
+        width: 100%; /* Prend toute la largeur disponible */
+        text-align: center; /* Centrer le texte horizontalement */
+    }
+
+/* Au survol (hover) des liens dans le menu mobile */
+    nav.main-nav.active a:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Couleur de fond semi-transparente au survol */
+    }
+
+
+}
+
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.place {
+    display: flex;
+    flex-direction: row;
+    width: 95%;  /* Utilisation de 95% pour presque toute la largeur de la page */
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.138);
+    margin-bottom: 20px;
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.place img {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.details h2 {
+    margin-top: 0;
+}
+
+.details p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.voir-plus {
+    background-color: #ff6600;
+    transition: background-color 0.3s ease;
+}
+
+.voir-plus:hover {
+    background-color: #e65c00;
+}
+
+.s-y-rendre {
+    background-color: #ff6600;
+    transition: background-color 0.3s ease;
+}
+
+.s-y-rendre:hover {
+    background-color: #e65c00;
+}
+
+/* Media Queries pour les appareils mobiles */
+@media (max-width: 768px) {
+    .place {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .place img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .details {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        width: 38%; /* Optionnel: pour que les boutons prennent chacun 48% de la largeur */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.container2 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.photo-gallery {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slider img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: none;
+}
+.slider img.active {
+    display: block;
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.details {
+    padding: 20px;
+}
+.details h1 {
+    margin-top: 0;
+}
+.details .description {
+    margin-bottom: 20px;
+}
+.details .info {
+    margin-bottom: 20px;
+}
+
+.additional-section {
+    margin-top: 40px;
+}
+.highlight {
+    font-weight: bold;
+    font-size: 29px;
+    margin-bottom: 20px;
+}
+.additional-photos {
+    display: flex;
+    gap: 20px;
+}
+.additional-photos img {
+    width: 48%;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .additional-photos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .additional-photos img {
+        width: 100%; /* Pour que les images occupent la largeur complète */
+        height: auto; /* Pour maintenir le ratio d'aspect */
+    }
+}
+

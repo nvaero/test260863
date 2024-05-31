@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le logement - Naviste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+    <header>
+        <div class="nav-logo">
+            <img src="chemin/vers/votre-logo.png" alt="Logo de l'entreprise">
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Accueil</a>
+            <a href="logement.html">Le logement</a>
+            <a href="region.html">La région</a>
+            <a href="#">Réserver</a>
+        </nav>
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <div class="header-content">
+        <img src="photos/salon/image-principale.png" alt="Image d'accueil" class="main-image">
+        
+        
+    </div>
+    
+    <div class="container">
+        <br>
+        <br>
+        
+        <br>
+        <div class="photo-gallery">
+
+            <div class="slider">
+                <img src="photos/fwd/photo1.png" alt="Photo 1" class="active">
+                <img src="photos/fwd/IMG_6993.jpg" alt="Photo 2">
+                <img src="image3.jpg" alt="Photo 3">
+            </div>
+            <div class="controls">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </div>
+        <div class="details">
+            <p class="description">
+                <strong>Description complète du logement. Ce texte peut inclure des détails sur les chambres, les équipements, la localisation, les attractions à proximité, etc.</strong>
+            </p>
+            <p class="info">
+                <strong>Caracteristique :</strong> <br>
+                6 personnes/ 3 chambres<br>
+                Parking et wifi gratuit<br>
+                Ménage inclus
+            </p>
+            
+        </div>
+        
+        <div class="additional-section">
+            <p class="highlight">L'exterieur : </p>
+            <div class="additional-photos">
+                <img src="photos/template.png" alt="Photo 4">
+                <img src="photos/template.png" alt="Photo 5">
+            </div>
+        </div>
+        <div class="additional-section">
+            <p class="highlight">Le salon : </p>
+            <div class="additional-photos">
+                <img src="photos/fwd/IMG_6993.jpg" alt="Photo 4">
+                <img src="photos/fwd/salon2.png" alt="Photo 5">
+            </div>
+        </div>
+        <div class="additional-section">
+            <p class="highlight">La cuisine : </p>
+            <div class="additional-photos">
+                <img src="photos/template.png" alt="Photo 4">
+                <img src="photos/template.png" alt="Photo 5">
+            </div>
+        </div>
+        <div class="additional-section">
+            <p class="highlight">La première chambre : </p>
+            <div class="additional-photos">
+                <img src="photos/template.png" alt="Photo 4">
+                <img src="photos/template.png" alt="Photo 5">
+            </div>
+        </div>
+        <div class="additional-section">
+            <p class="highlight">La deuxième chambre : </p>
+            <div class="additional-photos">
+                <img src="photos/template.png" alt="Photo 4">
+                <img src="photos/template.png" alt="Photo 5">
+            </div>
+        </div>
+        <div class="additional-section">
+            <p class="highlight">La troisième chambre : </p>
+            <div class="additional-photos">
+                <img src="photos/template.png" alt="Photo 4">
+                <img src="photos/template.png" alt="Photo 5">
+            </div>
+        </div>
+        <div class="additional-section">
+            <p class="highlight">La salle de bain : </p>
+            <div class="additional-photos">
+                <img src="photos/template.png" alt="Photo 4">
+                <img src="photos/template.png" alt="Photo 5">
+            </div>
+        </div>
+        <br>
+        <br>
+    <footer>
+        
+        <nav>
+            <a href="#">Mentions Légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Contact</a>
+           
+        </nav>
+        <p>&copy; 2024 Naviste / Tous droits réservés</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.slider img');
+            const totalImages = images.length;
+
+            function updateActiveImage() {
+                images.forEach((img, index) => {
+                    img.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            document.querySelector('.next').addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % totalImages;
+                updateActiveImage();
+            });
+
+            document.querySelector('.prev').addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                updateActiveImage();
+            });
+
+            updateActiveImage(); // Initial call to set the first image as active
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durée de l'animation en millisecondes
+            once: true, // Si true, l'animation ne se produit qu'une seule fois
+        });
+    </script>
+</body>

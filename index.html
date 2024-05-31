@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Naviste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+    <header>
+        <div class="nav-logo">
+            <img src="chemin/vers/votre-logo.png" alt="Logo de l'entreprise">
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Accueil</a>
+            <a href="logement.html">Le logement</a>
+            <a href="region.html">La région</a>
+            <a href="#">Réserver</a>
+        </nav>
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    
+    <div class="header-content">
+        <video src="videos/video naviste essai.mp4" autoplay loop muted class="main-video"></video>
+        <div class="video-overlay">
+            <h2>Texte en gras</h2>
+            <p>Sous-titre ici</p> 
+            <a href="#" class="main-button">Voir les disponibilités</a>
+        </div>
+        
+    </div>
+    <main>
+        <h1>Un logement neuf</h1>
+        <p>Découvrez notre logement refait à neuf en 2024. Ici, vous passerez vos meilleurs vacances ! ;-)</p>
+        <!-- Autres contenus ici -->
+    </main>
+    <br>
+    <br>
+    <br>
+    <section class="property-section" data-aos="slide-right">
+        <div class="property-text">
+            
+            <h2>Le Logement</h2>
+            <p>
+                Le logement a été entièrement rénové dans un style campagne -maison de famille qui sera vous séduire par son charme. Tout a été pensé pour que vous vous sentiez comme à la maison, avec tous les équipements et le confort nécessaire pour un agréable séjour.
+            </p>
+            <br>
+            <a href="logement.html" class="discover-button">Le découvrir</a>
+        </div>
+        <div class="property-image">
+            <img src="photos/fwd/IMG_6993.jpg" alt="Image1">
+        </div>
+    </section>
+    <main>
+        <h1>Des lieux incontournables !</h1>
+        <p>Explorez une multitude de lieux situés aux alentours du logement. (finir)</p>
+        <!-- Autres contenus ici -->
+    </main>
+    <section class="region-section" data-aos="slide-left">
+        <div class="images-container">
+            <img src="photos/region/chateau-val.png" alt="Chateau de Val">
+            <img src="photos/region/sancy.jpg" alt="Image 2">
+            <img src="photos/region/cantal.jpg" alt="Image 3">
+            <img src="photos/region/puydedome.jpg" alt="Puy de Dome">
+        </div>
+        <div class="text-container">
+            <a href="region.html" class="discover-button">Tout voir !</a>
+        </div>
+    </section>
+    <section class="location-section" data-aos="slide-right">
+        <div class="location-text">
+            <h2>Notre Emplacement</h2>
+            <p>Découvrez où se trouve notre magnifique logement, idéalement situé pour vos besoins.</p>
+        </div>
+        <div id="map"></div>
+    </section>
+    <section class="contact-section" data-aos="slide-left">
+        <div class="contact-text">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute question ou demande d'information, n'hésitez pas à nous envoyer un e-mail à l'adresse ci-dessous :</p>
+            <a href="mailto:votre.adresse@mail.com" class="contact-email">votre.adresse@mail.com</a>
+        </div>
+    </section>
+    
+    
+    <footer>
+        
+        <nav>
+            <a href="mentions.html">Mentions Légales</a>
+            <a href="confidentialite.html">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Contact</a>
+           
+        </nav>
+        <p>&copy; 2024 Naviste / Tous droits réservés</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durée de l'animation en millisecondes
+            once: true, // Si true, l'animation ne se produit qu'une seule fois
+        });
+    </script>
+</body>
+</html>
