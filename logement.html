@@ -16,7 +16,7 @@
             <a href="index.html">Accueil</a>
             <a href="logement.html">Le logement</a>
             <a href="region.html">La région</a>
-            <a href="#">Réserver</a>
+            <a href="reserver.html">Réserver</a>
         </nav>
         <div class="nav-toggle" onclick="toggleMenu()">
             <div class="bar"></div>
@@ -24,7 +24,7 @@
             <div class="bar"></div>
         </div>
     </header>
-    <div class="header-content">
+    <div class="header-content2">
         <img src="photos/salon/image-principale.png" alt="Image d'accueil" class="main-image">
         
         
@@ -49,14 +49,20 @@
         </div>
         <div class="details">
             <p class="description">
-                <strong>Description complète du logement. Ce texte peut inclure des détails sur les chambres, les équipements, la localisation, les attractions à proximité, etc.</strong>
+                <strong>Le logement :</strong> <br> <br>
+                Le logement occupe tout l'étage de la maison et offre une vue magnifique et dégagée sur la nature extérieure. Parfait pour un séjour en famille ou entre amis. Composé d'un salon ouvert sur une cuisine, trois chambres, une salle d'eau, wc , parc et espaces extérieurs, il sera vous conquérir par son confort moderne, tout en gardant le charme de l'ancien. <br> <br>
+                Le logement est situé en pleine campagne, à 5 minutes du village de Lanobre et de tous commerces. A 10 minutes du château de Val et du barrage de Bort. Il occupe le 1er étage de la maison (vous serez seul occupant dans cette maison, le RDC n'étant pas occupé), composé d'une très grande pièce comprenant séjour, salle à manger, cuisine ouverte sur la pièce de vie, trois chambres, salle d'eau et WC. L'extérieur est très paisible avec coin repas et détente, braséro, jeux de société.. <br> <br>
+                Entièrement rénové en 2024 dans un style campagne - maison de famille, il sera vous séduire par son charme. Tout a été pensé pour que vous vous sentiez comme à la maison, avec tous les équipements et le confort nécessaire pour un agréable séjour. Un parc clos a été aménagé pour les animaux de compagnie.
             </p>
             <p class="info">
-                <strong>Caracteristique :</strong> <br>
-                6 personnes/ 3 chambres<br>
-                Parking et wifi gratuit<br>
-                Ménage inclus
+                <strong>Caracteristiques :</strong> <br> <br>
+                - 6 personnes/ 3 chambres<br>
+                - Parking et wifi gratuit<br>
+                - Ménage inclus
             </p>
+            <br>
+            <br>
+            <a href="reserver.html" class="main-button">Tarifs et disponibilités</a>
             
         </div>
         
@@ -109,13 +115,46 @@
                 <img src="photos/template.png" alt="Photo 5">
             </div>
         </div>
+        <section class="location-section" data-aos="slide-right">
+            <div class="location-text">
+                <h2>Notre Emplacement</h2>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20999.343587092408!2d2.55554342437542!3d45.43126559866623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f78608b70438e7%3A0x184c986ad5190702!2c Farreyrolles%2C%2015270%20 Lanobre!5e1!3m2!1sfr!2sfr!4v1718918305296!5m2!1sfr!2sfr" width=100% height=500px style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <br>
+        <main>
+            <h1>Des questions ?</h1>
+            <p>Répondez au formulaire suivant ou envoyez nous un mail à l'adresse suivante pour toute demande de renseigenements. naviste6364@gmail.com</p>
+            <!-- Autres contenus ici -->
+        </main>
+        <div class="contact-form">
+            <h2>Demande de renseigenements </h2>
+            <form action="https://formspree.io/f/mnnaajzp" method="POST">
+              <label for="name">Nom :</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required>
+              <label for="arrival">Date d'arrivée :</label>
+              <input type="date" id="arrival" name="arrival" required>
+              <label for="departure">Date de départ :</label>
+              <input type="date" id="departure" name="departure" required>
+              <label for="subject">Sujet :</label>
+              <input type="text" id="subject" name="subject" required>
+              <label for="message">Message :</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <button type="submit">Envoyer</button>
+            </form>
+            <p class="centered-text">Nous vous répondrons dans les plus brefs délais.</p>
+          </div>
         <br>
         <br>
     <footer>
         
         <nav>
-            <a href="#">Mentions Légales</a>
-            <a href="#">Politique de confidentialité</a>
+            <a href="mentions.html">Mentions Légales</a>
+            <a href="confidentialite.html">Politique de confidentialité</a>
             <a href="#">Conditions d'utilisation</a>
             <a href="#">Contact</a>
            

@@ -8,8 +8,8 @@ body {
 
 /* Style de l'en-tête (header) */
 header {
-    background-color: #fff; /* Rendre le header transparent */
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     padding: 10px;
     position: fixed;
     display: flex;
@@ -18,8 +18,8 @@ header {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* Assurer que le header est au-dessus du contenu */
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0)); /* Dégradé de couleur */
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
     transition: top 0.3s;
 }
 
@@ -31,7 +31,7 @@ header h1 {
 .logo img {
     width: 225px; /* Largeur souhaitée pour votre logo */
     height: 40px;
-    margin-left:15px ;
+    margin-left: 15px;
     cursor: pointer;
 }
 
@@ -39,7 +39,6 @@ header h1 {
 header.scrolled {
     top: -100px; /* Déplace le header hors de l'écran vers le haut */
 }
-
 
 /* Style de la barre de navigation (nav) */
 nav {
@@ -50,24 +49,18 @@ nav {
     background-color: transparent; /* Couleur de fond semi-transparente */
     padding: 10px 20px;
     margin-left: auto;
-    
 }
-
 
 /* Style des liens dans la barre de navigation */
 nav a {
     color: #fff;
     text-decoration: none;
-    
     font-weight: bold;
     font-size: 19px;
     position: relative;
     padding: 10px 20px;
     text-transform: uppercase;
-    
 }
-
-
 
 nav a::after {
     content: ''; /* Contenu vide (utilisé pour le pseudo-élément) */
@@ -78,15 +71,12 @@ nav a::after {
     height: 2px; /* Épaisseur du trait */
     background-color: #ff6600; /* Couleur du trait */
     transition: width 0.3s ease; /* Animation de transition pour la largeur */
-    
 }
 
 /* Au survol (hover) des liens */
 nav a:hover::after {
     width: 100%; /* Afficher le trait en élargissant de gauche à droite */
 }
-
-
 
 /* Style du logo dans la navigation */
 .nav-logo {
@@ -98,20 +88,19 @@ nav a:hover::after {
     width: 100px; /* Taille du logo */
     height: auto;
 }
+
 /* Style de la zone de contenu dans l'en-tête */
 .header-content {
     position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Style de la vidéo principale */
-.main-video {
-    width: 100%;
-    max-height: 100%;/* 100% de la hauteur de la fenêtre */
-    object-fit: cover; /* Redimensionner la vidéo pour couvrir toute la zone */
-    object-position: center; /* Centrer la vidéo horizontalement */
+/* Style de la zone de contenu dans l'en-tête */
+.header-content2 {
+    position: relative;
+    
 }
-
-
 
 /* Style du contenu principal (main) */
 main {
@@ -147,50 +136,14 @@ footer nav a {
     }
 }
 
-.video-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
 
-/* Style du texte en gras */
-.video-overlay h2 {
-    font-weight: bold;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
 
-/* Style du sous-titre */
-.video-overlay p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
 
-/* Style du bouton */
-.video-overlay .main-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-/* Au survol (hover) du bouton */
-.video-overlay .main-button:hover {
-    background-color: #e65c00;
-}
 
 .main-image {
     width: 100%;
-    height: 400px;
-    max-width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image-overlay {
@@ -202,11 +155,49 @@ footer nav a {
     color: #fff;
 }
 
-/* Style du texte en gras dans la surimpression */
+/* Style du texte en gras */
 .image-overlay h2 {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
+
+/* Style du sous-titre */
+.image-overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style du bouton */
+.image-overlay .main-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Au survol (hover) du bouton */
+.image-overlay .main-button:hover {
+    background-color: #e65c00;
+} 
+
+@media (max-width: 768px) {
+    .header-content {
+        height: 100vh;
+    }
+
+    .main-image {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
 
 
 .property-section {
@@ -337,16 +328,25 @@ footer nav a {
     line-height: 1.6;
 }
 
-#map {
+.map {
     width: 100%;
     height: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+}
+
+.map iframe {
+    width: 100%;
+    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    border: 0;
+    border-radius: 15px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Sensation de profondeur */
 }
 
 /* Styles spécifiques aux appareils mobiles */
 @media screen and (max-width: 768px) {
-    #map {
+    .map {
         height: 300px; /* Réduire la hauteur de la carte sur les petits écrans */
     }
 }
@@ -510,6 +510,7 @@ footer nav a {
         right: 15px;
         z-index: 1500; /* Assurez-vous que le bouton hamburger est au-dessus du contenu */
         cursor: pointer;
+        padding-right: 20px;
     }
 
     /* Style du bouton du menu hamburger (traits) */
@@ -773,3 +774,129 @@ footer nav a {
     }
 }
 
+
+
+/* page reserver : */
+
+
+#calendar {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+.fc-toolbar, .fc-header-toolbar {
+      font-size: 12px; /* Réduire la taille de la police de la barre d'outils */
+}
+.fc-daygrid-day-number {
+      font-size: 10px; /* Réduire la taille de la police des numéros de jours */
+}
+.fc-event {
+      font-size: 10px; /* Réduire la taille de la police des événements */
+}
+
+.container3 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header3 {
+    text-align: center;
+    padding: 50px 0;
+}
+.header3 h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+.pricing {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.pricing h2 {
+    text-align: center;
+    color: #666;
+    font-size: 1.5em;
+}
+.pricing table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.pricing table, .pricing th, .pricing td {
+    border: 1px solid #ddd;
+}
+.pricing th, .pricing td {
+    padding: 15px;
+    text-align: center;
+}
+.pricing th {
+    background-color: #f2f2f2;
+}
+.calendar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.contact-form h2 {
+    text-align: center;
+    color: #666;
+    font-size: 1.5em;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+.contact-form input, .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.contact-form button {
+    padding: 10px;
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #e65c00;
+}
+
+.centered-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.details .main-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Au survol (hover) du bouton */
+.details .main-button:hover {
+    background-color: #e65c00;
+} 
