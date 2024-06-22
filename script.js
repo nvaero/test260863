@@ -65,4 +65,20 @@ AOS.init({
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    let navLinks = document.querySelectorAll("nav a");
 
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Empêcher le chargement immédiat de la page
+            
+            // Ajouter une classe pour déclencher l'animation (ex. fade-out)
+            link.classList.add("fade-out");
+
+            // Attendre quelques millisecondes pour l'animation (ajuster selon besoin)
+            setTimeout(function() {
+                window.location.href = link.href; // Rediriger vers le lien après l'animation
+            }, 500); // 500 millisecondes (ajuster la durée d'animation si nécessaire)
+        });
+    });
+});
