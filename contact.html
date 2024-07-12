@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La région - Naviste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="photos/logo/1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+    <header>
+        <div class="nav-logo">
+            <img src="photos/logo/IMG_3821.PNG" alt="Logo">
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Accueil</a>
+            <a href="logement.html">Le logement</a>
+            <a href="region.html">La région</a>
+            <a href="reserver.html">Réserver</a>
+        </nav>
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="contact-form">
+        <h1>Contactez-nous</h1>
+        <form action="https://formspree.io/f/xanwwkrg" method="POST">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> 
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <section class="contact-section" >
+        <div class="contact-text">
+            <h2>Ou contactez-nous via l'adresse mail suivante</h2>
+            <a href="mailto:naviste6364@gmail.com" class="contact-email">naviste6364@gmail.com</a>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <footer>
+        
+        <nav>
+            <a href="mentions.html">Mentions Légales</a>
+            <a href="confidentialite.html">Politique de confidentialité</a>
+            <a href="conditions.html">Conditions d'utilisation</a>
+            <a href="contact.html">Contact</a>
+           
+        </nav>
+        <p>&copy; 2024 Naviste / Tous droits réservés</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true, 
+        });
+    </script>
+</body>

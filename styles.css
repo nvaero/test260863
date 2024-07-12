@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #ffffff; /* Fond blanc */
+    background-color: #ffffff; 
     color: #333333;
 }
 
@@ -24,34 +24,34 @@ header {
 }
 
 header h1 {
-    margin-left: 20px; /* Ajoute une marge à droite du titre */
+    margin-left: 20px; 
     cursor: pointer;
 }
 
 .logo img {
-    width: 225px; /* Largeur souhaitée pour votre logo */
+    width: 225px;
     height: 40px;
     margin-left: 15px;
     cursor: pointer;
 }
 
-/* Lorsque vous faites défiler vers le bas, cachez le header en le déplaçant hors de l'écran */
+
 header.scrolled {
-    top: -100px; /* Déplace le header hors de l'écran vers le haut */
+    top: -100px; 
 }
 
-/* Style de la barre de navigation (nav) */
+
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: transparent; /* Couleur de fond semi-transparente */
+    background-color: transparent; 
     padding: 10px 20px;
     margin-left: auto;
 }
 
-/* Style des liens dans la barre de navigation */
+
 nav a {
     color: #fff;
     text-decoration: none;
@@ -63,52 +63,49 @@ nav a {
 }
 
 nav a::after {
-    content: ''; /* Contenu vide (utilisé pour le pseudo-élément) */
+    content: ''; 
     position: absolute;
-    bottom: -2px; /* Position sous le texte */
+    bottom: -2px; 
     left: 0;
-    width: 0; /* Largeur initiale du trait (masqué au départ) */
-    height: 2px; /* Épaisseur du trait */
-    background: linear-gradient(135deg, #ff6600, #ff9933); /* Couleur du trait */
-    transition: width 0.3s ease; /* Animation de transition pour la largeur */
+    width: 0; 
+    height: 2px; 
+    background: linear-gradient(135deg, #ff6600, #ff9933); 
+    transition: width 0.3s ease; 
 }
 
-/* Au survol (hover) des liens */
+
 nav a:hover::after {
-    width: 100%; /* Afficher le trait en élargissant de gauche à droite */
+    width: 100%; 
 }
 
-/* Style du logo dans la navigation */
+
 .nav-logo {
-    flex: 0 0 auto; /* Empêcher le logo de rétrécir ou s'étendre */
-    margin: 0 20px; /* Marge autour du logo */
+    flex: 0 0 auto; 
+    margin: 0 20px; 
 }
 
 .nav-logo img {
-    width: 100px; /* Taille du logo */
+    width: 100px; 
     height: auto;
 }
 
-/* Style de la zone de contenu dans l'en-tête */
+
 .header-content {
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-/* Style de la zone de contenu dans l'en-tête */
 .header-content2 {
     position: relative;
     
 }
 
-/* Style du contenu principal (main) */
 main {
     text-align: center;
-    padding: 120px 20px 50px; /* Ajouter de l'espace en haut pour compenser le header transparent */
+    padding: 120px 20px 50px; 
 }
 
-/* Style du pied de page (footer) */
 footer {
     background-color: #ffffff;
     color: #000000;
@@ -116,7 +113,6 @@ footer {
     padding: 20px 0;
 }
 
-/* Style des liens dans le pied de page */
 footer nav a {
     color: #000000;
     text-decoration: none;
@@ -132,13 +128,9 @@ footer nav a {
 
     footer nav a {
         font-size: 15px;
-        margin: 10px 0; /* Ajouter de la marge verticale entre les liens */
+        margin: 10px 0; 
     }
 }
-
-
-
-
 
 .main-image {
     width: 100%;
@@ -155,20 +147,17 @@ footer nav a {
     color: #fff;
 }
 
-/* Style du texte en gras */
 .image-overlay h2 {
     font-weight: bold;
     font-size: 28px;
     margin-bottom: 10px;
 }
 
-/* Style du sous-titre */
 .image-overlay p {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-/* Style du bouton */
 .main-button {
     display: inline-block;
     padding: 12px 24px;
@@ -179,27 +168,26 @@ footer nav a {
     border-radius: 5px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* Assurer que le positionnement est relatif pour l'élément span */
+    position: relative;
     overflow: hidden;
 }
 
-/* Au survol (hover) du bouton */
 .main-button:hover {
     background: linear-gradient(135deg, #e65c00, #ff8c1a);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 } 
 .main-button span {
-    position: absolute; /* Position absolue pour le texte à l'intérieur du bouton */
-    left: 0; /* Aligner le texte sur la gauche du bouton */
-    width: 100%; /* Occuper toute la largeur du bouton */
-    height: 100%; /* Occuper toute la hauteur du bouton */
-    background: linear-gradient(135deg, #ff9933, #ff6600); /* Dégradé de texte inversé */
-    transition: transform 0.3s ease; /* Animation pour le texte du bouton */
-    transform: translateY(100%); /* Animation pour le texte du bouton */
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(135deg, #ff9933, #ff6600); 
+    transition: transform 0.3s ease; 
+    transform: translateY(100%); 
 }
 
 .main-button:hover span {
-    transform: translateY(0); /* Décalage vers le haut au survol */
+    transform: translateY(0); 
 }
 
 @media (max-width: 768px) {
@@ -226,8 +214,8 @@ footer nav a {
 }
 
 .property-text {
-    flex: 1; /* Permet au contenu texte de s'étendre */
-    margin-right: 30px; /* Marge à droite pour l'espace entre le texte et l'image */
+    flex: 1; 
+    margin-right: 30px; 
 }
 
 .property-text h2 {
@@ -242,7 +230,7 @@ footer nav a {
 }
 
 .property-image {
-    flex: 1; /* Permet à l'image de s'étendre */
+    flex: 1;
 }
 
 .property-image img {
@@ -254,48 +242,48 @@ footer nav a {
 
 .discover-button {
     padding: 12px 24px;
-    background: linear-gradient(135deg, #ff6600, #ff9933); /* Dégradé diagonal */
+    background: linear-gradient(135deg, #ff6600, #ff9933); 
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    position: relative; /* Assurer que le positionnement est relatif pour l'élément span */
-    overflow: hidden; /* Masquer tout débordement de l'élément span */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour la couleur de fond et l'ombre */
+    position: relative; 
+    overflow: hidden; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .discover-button:hover {
-    background: linear-gradient(135deg, #e65c00, #ff8c1a); /* Dégradé diagonal avec nuances */
+    background: linear-gradient(135deg, #e65c00, #ff8c1a); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .discover-button span {
-    position: absolute; /* Position absolue pour le texte à l'intérieur du bouton */
-    left: 0; /* Aligner le texte sur la gauche du bouton */
-    width: 100%; /* Occuper toute la largeur du bouton */
-    height: 100%; /* Occuper toute la hauteur du bouton */
-    background: linear-gradient(135deg, #ff9933, #ff6600); /* Dégradé de texte inversé */
-    transition: transform 0.3s ease; /* Animation pour le texte du bouton */
-    transform: translateY(100%); /* Cacher le texte en le déplaçant vers le bas */
-    bottom: 0; /* Positionner le texte en bas du bouton */
-    display: block;/* Cacher le texte en le déplaçant vers le bas */
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(135deg, #ff9933, #ff6600); 
+    transition: transform 0.3s ease; 
+    transform: translateY(100%);
+    bottom: 0; 
+    display: block;
 }
 
 .discover-button:hover span {
-    transform: translateY(-100%); /* Déplacer le texte vers le haut au survol */
+    transform: translateY(-100%); 
 }
 
 @media screen and (max-width: 768px) {
     .property-section {
-        flex-direction: column-reverse; /* Inverser l'ordre des éléments */
+        flex-direction: column-reverse; 
         padding: 30px;
     }
 
     .property-text,
     .property-image {
-        flex: none; /* Annuler la flexibilité pour le réalignement */
-        width: 100%; /* Prendre toute la largeur disponible */
+        flex: none; 
+        width: 100%; 
         margin: 0;
     }
 
@@ -319,7 +307,7 @@ footer nav a {
 }
 
 .images-container img {
-    width: calc(25% - 10px); /* Ajustez la taille selon vos besoins */
+    width: calc(25% - 10px);
     height: auto;
     border-radius: 15px;
 }
@@ -334,13 +322,13 @@ footer nav a {
 
 @media (max-width: 1024px) {
     .images-container img {
-        width: calc(50% - 10px); /* 2 images par ligne */
+        width: calc(50% - 10px); 
     }
 }
 
 @media (max-width: 600px) {
     .images-container img {
-        width: 100%; /* 1 image par ligne */
+        width: 100%; 
     }
 }
 
@@ -375,20 +363,17 @@ footer nav a {
 
 .map iframe {
     width: 100%;
-    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    height: 500px; 
     border: 0;
-    border-radius: 15px; /* Bords arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Sensation de profondeur */
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); 
 }
 
-/* Styles spécifiques aux appareils mobiles */
 @media screen and (max-width: 768px) {
     .map {
-        height: 300px; /* Réduire la hauteur de la carte sur les petits écrans */
+        height: 300px; 
     }
 }
-
-
 .contact-section {
     padding: 50px 20px;
     text-align: center;
@@ -423,7 +408,7 @@ footer nav a {
     color: #e65c00;
 }
 
-/* Styles spécifiques aux appareils mobiles */
+
 @media screen and (max-width: 768px) {
     .contact-section {
         padding: 30px 10px;
@@ -441,7 +426,6 @@ footer nav a {
         font-size: 16px;
     }
 }
-
 
 .legal-content {
     max-width: 800px;
@@ -517,40 +501,36 @@ footer nav a {
     text-decoration: underline;
 }
 
-
-
-
-/* Styles spécifiques aux appareils mobiles (max-width: 768px) */ 
 @media screen and (max-width: 768px) {
-    /* Cacher la barre de navigation principale */
+
     nav.main-nav {
         position: fixed;
         top: 0;
-        right: -100%; /* Déplacer le menu hors de l'écran à droite par défaut */
+        right: -100%; 
         width: 80%;
         max-width: 300px;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7); 
         z-index: 1000;
-        transition: right 0.3s ease; /* Animation de transition pour le déplacement vers la droite */
+        transition: right 0.3s ease;
         display: flex;
-        flex-direction: column; /* Afficher les éléments du menu en colonne */
-        justify-content: center; /* Centrer verticalement les éléments du menu */
+        flex-direction: column; 
+        justify-content: center; 
         align-items: center;
     }
 
-    /* Afficher le bouton du menu hamburger */
+   
     .nav-toggle {
         display: block;
         position: absolute;
         top: 15px;
         right: 15px;
-        z-index: 1500; /* Assurez-vous que le bouton hamburger est au-dessus du contenu */
+        z-index: 1500;
         cursor: pointer;
         padding-right: 20px;
     }
 
-    /* Style du bouton du menu hamburger (traits) */
+    
     .nav-toggle .bar {
         display: block;
         width: 25px;
@@ -560,7 +540,6 @@ footer nav a {
         transition: transform 0.3s ease;
     }
 
-    /* Animation du menu hamburger (rotation des traits) */
     .nav-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(-45deg);
     }
@@ -582,8 +561,6 @@ footer nav a {
         
     }
     
-
-/* Style des liens dans le menu de navigation mobile */
     nav.main-nav.active a {
         color: #fff;
         text-decoration: none;
@@ -591,22 +568,17 @@ footer nav a {
         padding: 20px;
         display: block;
         transition: background-color 0.3s ease;
-        width: 100%; /* Prend toute la largeur disponible */
-        text-align: center; /* Centrer le texte horizontalement */
+        width: 100%; 
+        text-align: center; 
     }
 
-/* Au survol (hover) des liens dans le menu mobile */
+
     nav.main-nav.active a:hover {
-        background-color: rgba(255, 255, 255, 0.1); /* Couleur de fond semi-transparente au survol */
+        background-color: rgba(255, 255, 255, 0.1); 
     }
 
 
 }
-
-
-
-
-
 .container {
     display: flex;
     flex-direction: column;
@@ -617,7 +589,7 @@ footer nav a {
 .place {
     display: flex;
     flex-direction: row;
-    width: 95%;  /* Utilisation de 95% pour presque toute la largeur de la page */
+    width: 95%;  
     max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.138);
     margin-bottom: 20px;
@@ -669,27 +641,27 @@ footer nav a {
 
 .voir-plus {
     background: linear-gradient(135deg, #ff6600, #ff9933);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour la couleur de fond et l'ombre */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .voir-plus:hover {
-    background: linear-gradient(135deg, #e65c00, #ff8c1a); /* Dégradé diagonal avec nuances */
+    background: linear-gradient(135deg, #e65c00, #ff8c1a);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .s-y-rendre {
     background: linear-gradient(135deg, #ff6600, #ff9933);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour la couleur de fond et l'ombre */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .s-y-rendre:hover {
-    background: linear-gradient(135deg, #e65c00, #ff8c1a); /* Dégradé diagonal avec nuances */
+    background: linear-gradient(135deg, #e65c00, #ff8c1a); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Media Queries pour les appareils mobiles */
+
 @media (max-width: 768px) {
     .place {
         flex-direction: column;
@@ -715,18 +687,9 @@ footer nav a {
     }
 
     .btn {
-        width: 38%; /* Optionnel: pour que les boutons prennent chacun 48% de la largeur */
+        width: 38%; 
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 .container2 {
@@ -810,28 +773,25 @@ footer nav a {
     }
 
     .additional-photos img {
-        width: 100%; /* Pour que les images occupent la largeur complète */
-        height: auto; /* Pour maintenir le ratio d'aspect */
+        width: 100%; 
+        height: auto; 
     }
 }
 
-
-
 /* page reserver : */
-
 
 #calendar {
       max-width: 400px;
       margin: 0 auto;
     }
 .fc-toolbar, .fc-header-toolbar {
-      font-size: 12px; /* Réduire la taille de la police de la barre d'outils */
+      font-size: 12px; 
 }
 .fc-daygrid-day-number {
-      font-size: 10px; /* Réduire la taille de la police des numéros de jours */
+      font-size: 10px; 
 }
 .fc-event {
-      font-size: 10px; /* Réduire la taille de la police des événements */
+      font-size: 10px; 
 }
 
 .container3 {
@@ -914,11 +874,11 @@ footer nav a {
     color: white;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour la couleur de fond et l'ombre */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .contact-form button:hover {
-    background: linear-gradient(135deg, #e65c00, #ff8c1a); /* Dégradé diagonal avec nuances */
+    background: linear-gradient(135deg, #e65c00, #ff8c1a); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -938,17 +898,68 @@ footer nav a {
     font-weight: bold;
     border-radius: 5px;
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour la couleur de fond et l'ombre */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Au survol (hover) du bouton */
 .details .main-button:hover {
-    background: linear-gradient(135deg, #e65c00, #ff8c1a); /* Dégradé diagonal avec nuances */
+    background: linear-gradient(135deg, #e65c00, #ff8c1a); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 } 
-
 .fade-out {
     opacity: 0;
-    transition: opacity 0.3s ease; /* Transition d'opacité pour l'effet de fondu */
+    transition: opacity 0.3s ease; 
+}
+
+.menu {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.menu img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 15px;
+}
+.menu-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.menu-title {
+    font-weight: bold;
+    margin: 0;
+}
+.menu-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+@media (max-width: 768px) {
+    .menu {
+        border-radius: 0;
+    }
+    .menu-content {
+        padding: 8px;
+    }
+    .menu-button {
+        padding: 8px 16px;
+    }
 }
